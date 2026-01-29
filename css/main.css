@@ -74,6 +74,12 @@ p:last-child {
 }
 
 .section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-black);
   margin-bottom: var(--space-6);
 }
 
@@ -438,6 +444,17 @@ p:last-child {
   margin: 0 auto var(--space-10);
 }
 
+/* Hero H1 - SEO heading, visually subtle */
+.hero-h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 400;
+  color: var(--color-primary);
+  letter-spacing: var(--letter-spacing-wide);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
 /* Address with decorative lines */
 .hero-address {
   display: flex;
@@ -541,7 +558,7 @@ p:last-child {
 }
 
 .intro-content {
-  max-width: var(--content-max-width);
+  max-width: 1000px;
 }
 
 .intro-content p {
@@ -723,13 +740,7 @@ p:last-child {
 }
 
 .menus-title {
-  font-family: var(--font-heading);
-  font-size: var(--text-h1);
-  font-weight: 400;
-  letter-spacing: 0.2em;
   color: var(--color-primary-dark);
-  margin-bottom: var(--space-6);
-  text-transform: uppercase;
 }
 
 .menus-list {
@@ -778,10 +789,6 @@ p:last-child {
 }
 
 @media (min-width: 992px) {
-  .menus-title {
-    font-size: 56px;
-  }
-
   .menus-link {
     font-size: var(--text-body);
     padding: var(--space-3) 0;
@@ -804,12 +811,7 @@ p:last-child {
 }
 
 .valeurs-main-title {
-  font-family: var(--font-heading);
-  font-size: var(--text-h1);
-  font-weight: 700;
   color: var(--color-white);
-  letter-spacing: 0.1em;
-  margin-bottom: var(--space-6);
 }
 
 .valeurs-intro {
@@ -817,20 +819,8 @@ p:last-child {
   font-size: var(--text-body);
   line-height: var(--line-height-relaxed);
   color: var(--color-white);
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .valeurs-main-title {
-    font-size: 48px;
-  }
-}
-
-@media (min-width: 992px) {
-  .valeurs-main-title {
-    font-size: 56px;
-  }
 }
 
 .valeurs-grid {
@@ -880,12 +870,13 @@ p:last-child {
 
 .valeur-card-title {
   font-family: var(--font-heading);
-  font-size: var(--text-h1);
-  font-weight: 700;
+  font-size: var(--text-h2);
+  font-weight: 400;
   color: var(--color-cream);
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: var(--space-2);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .valeur-card-title--small {
@@ -919,7 +910,7 @@ p:last-child {
   }
 
   .valeur-card-title {
-    font-size: 56px;
+    font-size: var(--text-h1);
   }
 
   .valeur-card-title--small {
@@ -941,7 +932,7 @@ p:last-child {
   }
 
   .valeur-card-title {
-    font-size: 72px;
+    font-size: 52px;
   }
 }
 
@@ -962,13 +953,9 @@ p:last-child {
   text-align: center;
 }
 
+
 .lieu-title {
-  font-family: var(--font-heading);
-  font-size: var(--text-h1);
-  font-weight: 700;
-  color: var(--color-black);
-  letter-spacing: 0.1em;
-  margin-bottom: var(--space-6);
+  color: var(--color-primary);
 }
 
 .lieu-intro {
@@ -989,16 +976,17 @@ p:last-child {
 }
 
 .lieu-gallery-item {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.lieu-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media (min-width: 768px) {
-  .lieu-title {
-    font-size: 48px;
-  }
-
   .lieu-gallery {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 280px 320px;
@@ -1031,10 +1019,6 @@ p:last-child {
 }
 
 @media (min-width: 992px) {
-  .lieu-title {
-    font-size: 56px;
-  }
-
   .lieu-gallery {
     grid-template-rows: 340px 380px;
   }
@@ -1049,7 +1033,7 @@ p:last-child {
 }
 
 .producteurs-intro {
-  max-width: var(--content-max-width);
+  max-width: 1000px;
   margin: 0 auto var(--space-6);
   text-align: center;
   color: var(--color-black-light);
@@ -1146,6 +1130,10 @@ p:last-child {
   background-color: var(--color-white);
 }
 
+.trouver .section-title {
+  margin-bottom: 30px;
+}
+
 .trouver-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1153,49 +1141,51 @@ p:last-child {
   align-items: center;
 }
 
-.trouver-address-name {
-  font-family: var(--font-heading);
-  font-size: var(--text-h3);
-  font-weight: 700;
+.trouver-illustration {
+  width: 120px;
+  height: auto;
+  margin-bottom: var(--space-2);
+  opacity: 0.7;
+}
+
+.trouver-info p {
+  font-size: var(--text-body);
+  color: var(--color-black-light);
+  line-height: var(--line-height-relaxed);
   margin-bottom: var(--space-1);
 }
 
-.trouver-address {
-  color: var(--color-black-light);
-  margin-bottom: var(--space-3);
+.trouver-info strong {
+  color: var(--color-black);
+  font-weight: 600;
 }
 
-.trouver-contact {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-  margin-bottom: var(--space-4);
+.trouver-info a {
+  color: var(--color-primary);
+  transition: color var(--transition-normal);
 }
 
-.trouver-contact a {
+.trouver-info a:hover {
+  color: var(--color-primary-dark);
+}
+
+.trouver-label {
   color: var(--color-primary);
   font-weight: 500;
 }
 
-.trouver-contact a:hover {
-  color: var(--color-primary-dark);
-}
-
-.trouver-access p {
-  font-size: var(--text-small);
-  color: var(--color-black-light);
-  margin-bottom: var(--space-2);
-  line-height: var(--line-height-relaxed);
-}
-
-.trouver-access strong {
-  color: var(--color-black);
+.trouver-separator {
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-gray-light);
+  margin: var(--space-4) 0;
 }
 
 .trouver-map-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
 
 .trouver-map-circle {
