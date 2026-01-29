@@ -1,0 +1,154 @@
+/* ==========================================================================
+   CSS Custom Properties - Design System Tokens
+   Brasserie de Paudex
+   ========================================================================== */
+
+:root {
+  /* -------------------------------------------------------------------------
+     COLORS
+     ------------------------------------------------------------------------- */
+
+  /* Primary - Terracotta Brown */
+  --color-primary: #9C4E42;
+  --color-primary-light: #B86B5E;
+  --color-primary-dark: #7A3D34;
+  --color-primary-transparent: rgba(156, 78, 66, 0.1);
+
+  /* Secondary - Sage Green */
+  --color-secondary: #AFAC94;
+  --color-secondary-light: #C4C2AE;
+  --color-secondary-dark: #8F8D78;
+  --color-secondary-transparent: rgba(175, 172, 148, 0.2);
+
+  /* Neutrals */
+  --color-cream: #EEECE1;
+  --color-cream-dark: #EFDDCF;
+  --color-white: #FFFFFF;
+  --color-black: #2C2C2C;
+  --color-black-light: #4A4A4A;
+  --color-gray: #757575;
+  --color-gray-light: #B0B0B0;
+
+  /* Accent */
+  --color-gold: #C9A961;
+  --color-gold-light: #E0C78A;
+
+  /* -------------------------------------------------------------------------
+     TYPOGRAPHY
+     ------------------------------------------------------------------------- */
+
+  /* Font Families */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font Sizes - Desktop */
+  --text-display: 72px;
+  --text-h1: 48px;
+  --text-h2: 36px;
+  --text-h3: 24px;
+  --text-h4: 20px;
+  --text-body-large: 18px;
+  --text-body: 16px;
+  --text-small: 14px;
+  --text-tiny: 12px;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+
+  /* -------------------------------------------------------------------------
+     SPACING
+     ------------------------------------------------------------------------- */
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* Section Spacing */
+  --section-padding-y: 80px;
+  --section-padding-x: 40px;
+
+  /* Container Widths */
+  --container-max-width: 1200px;
+  --content-max-width: 800px;
+  --content-narrow: 600px;
+
+  /* -------------------------------------------------------------------------
+     EFFECTS
+     ------------------------------------------------------------------------- */
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(44, 44, 44, 0.05);
+  --shadow-md: 0 4px 6px rgba(44, 44, 44, 0.07);
+  --shadow-lg: 0 10px 25px rgba(44, 44, 44, 0.1);
+  --shadow-xl: 0 20px 40px rgba(44, 44, 44, 0.15);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* -------------------------------------------------------------------------
+     BREAKPOINTS (for reference in comments)
+     sm: 576px
+     md: 768px
+     lg: 992px
+     xl: 1200px
+     ------------------------------------------------------------------------- */
+
+  /* Z-Index Scale */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+}
+
+/* -------------------------------------------------------------------------
+   RESPONSIVE OVERRIDES
+   ------------------------------------------------------------------------- */
+
+/* Tablet and below */
+@media (max-width: 991px) {
+  :root {
+    --text-h1: 40px;
+    --text-h2: 32px;
+    --text-h3: 22px;
+    --section-padding-y: 64px;
+    --section-padding-x: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  :root {
+    --text-display: 48px;
+    --text-h1: 36px;
+    --text-h2: 28px;
+    --text-h3: 20px;
+    --text-h4: 18px;
+    --section-padding-y: 48px;
+    --section-padding-x: 20px;
+  }
+}
