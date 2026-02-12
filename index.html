@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
-  <title>Brasserie de Paudex | Restaurant Bord du Lac Léman - Paudex</title>
-  <meta name="description" content="Brasserie de Paudex — cuisine franche et conviviale au bord du lac Léman à Paudex. Produits locaux, label Fait Maison. Réservez ☎ +41 21 907 81 50">
-  <meta name="keywords" content="restaurant paudex, brasserie lutry, restaurant lac léman, restaurant fait maison lavaux, brasserie locale lausanne">
+  <title>Restaurant Fait Maison Paudex | Brasserie près Lausanne</title>
+  <meta name="description" content="Restaurant 100% fait maison près de Lausanne, Suisse. Cuisine de brasserie généreuse, produits locaux, vins du Lavaux. Réservez au +41 21 907 81 50">
+
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://brasseriedepaudex.ch/">
-  <meta property="og:title" content="Brasserie de Paudex | Restaurant Bord du Lac Léman">
-  <meta property="og:description" content="Cuisine franche & conviviale au bord du lac Léman. Produits locaux, label Fait Maison.">
-  <meta property="og:image" content="https://brasseriedepaudex.ch/images/og-image.jpg">
+  <meta property="og:url" content="https://brasseriepaudex.ch/">
+  <meta property="og:title" content="Restaurant Fait Maison Paudex | Brasserie près Lausanne">
+  <meta property="og:description" content="Restaurant 100% fait maison près de Lausanne. Cuisine de brasserie généreuse, produits locaux, vins du Lavaux.">
+  <meta property="og:image" content="https://brasseriepaudex.ch/images/og-image.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://brasseriedepaudex.ch/">
-  <meta property="twitter:title" content="Brasserie de Paudex | Restaurant Bord du Lac Léman">
-  <meta property="twitter:description" content="Cuisine franche & conviviale au bord du lac Léman. Produits locaux, label Fait Maison.">
+  <meta property="twitter:url" content="https://brasseriepaudex.ch/">
+  <meta property="twitter:title" content="Restaurant Fait Maison Paudex | Brasserie près Lausanne">
+  <meta property="twitter:description" content="Restaurant 100% fait maison près de Lausanne. Cuisine de brasserie généreuse, produits locaux, vins du Lavaux.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍷</text></svg>">
@@ -39,19 +39,19 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Restaurant",
+    "@type": ["Restaurant", "FrenchRestaurant"],
     "name": "Brasserie de Paudex",
     "image": [
-      "https://brasseriedepaudex.ch/images/restaurant-interieur-01.jpg",
-      "https://brasseriedepaudex.ch/images/restaurant-facade.jpg"
+      "https://brasseriepaudex.ch/images/restaurant-interieur-01.jpg",
+      "https://brasseriepaudex.ch/images/restaurant-facade.jpg"
     ],
-    "@id": "https://brasseriedepaudex.ch",
-    "url": "https://brasseriedepaudex.ch",
+    "@id": "https://brasseriepaudex.ch",
+    "url": "https://brasseriepaudex.ch",
     "telephone": "+41219078150",
     "priceRange": "CHF 25-60",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rte du Simplon 7",
+      "streetAddress": "Route du Simplon 7",
       "addressLocality": "Paudex",
       "addressRegion": "Vaud",
       "postalCode": "1094",
@@ -65,15 +65,27 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday"],
         "opens": "10:00",
         "closes": "14:30"
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "dayOfWeek": ["Tuesday"],
+        "opens": "10:00",
+        "closes": "14:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday"],
         "opens": "17:00",
         "closes": "22:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday"],
+        "opens": "17:00",
+        "closes": "22:00"
       },
       {
         "@type": "OpeningHoursSpecification",
@@ -83,15 +95,47 @@
       }
     ],
     "servesCuisine": ["French", "Swiss", "Brasserie"],
+    "hasMenu": {
+      "@type": "Menu",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Spécialités",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Malakoff maison",
+              "description": "Fromage frit croustillant, spécialité vaudoise"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Burger B.D.P.",
+              "description": "Burger maison fait avec viande suisse"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Bœuf bourguignon",
+              "description": "Chaque vendredi, mijoté 6 heures"
+            }
+          ]
+        }
+      ]
+    },
     "acceptsReservations": "True",
-    "menu": "https://brasseriedepaudex.ch/menus/carte.pdf",
+    "menu": "https://brasseriepaudex.ch/menus/carte.pdf",
     "paymentAccepted": "Cash, Credit Card, Debit Card, TWINT",
     "currenciesAccepted": "CHF",
     "sameAs": [
-      "https://instagram.com/brasseriedepaudex",
-      "https://tiktok.com/@brasseriedepaudex",
-      "https://facebook.com/brasseriedepaudex"
-    ]
+      "https://www.instagram.com/brasseriedepaudex/",
+      "https://www.tiktok.com/@brasseriedepaudex",
+      "https://www.facebook.com/people/Brasserie-de-Paudex/61584189159056/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "reviewCount": "610",
+      "bestRating": "5"
+    }
   }
   </script>
 </head>
@@ -114,19 +158,19 @@
 
         <!-- Center: Logo (hidden on mobile, visible on desktop) -->
         <a href="#" class="nav-logo">
-          <img src="images/brasserie_paudex_rect.png" alt="Brasserie de Paudex" class="nav-logo-img">
+          <img src="images/brasserie_paudex_rect.png" alt="Logo Brasserie de Paudex — restaurant fait maison près de Lausanne" class="nav-logo-img">
         </a>
 
         <!-- Right: Phone + Social Icons -->
         <div class="nav-right">
           <a href="tel:+41219078150" class="nav-phone">+41 21 907 81 50</a>
-          <a href="https://instagram.com/brasseriedepaudex" class="nav-social" aria-label="Instagram" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/brasseriedepaudex/" class="nav-social" aria-label="Instagram" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
           </a>
-          <a href="https://tiktok.com/@brasseriedepaudex" class="nav-social" aria-label="TikTok" target="_blank" rel="noopener">
+          <a href="https://www.tiktok.com/@brasseriedepaudex" class="nav-social" aria-label="TikTok" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
           </a>
-          <a href="https://facebook.com/brasseriedepaudex" class="nav-social" aria-label="Facebook" target="_blank" rel="noopener">
+          <a href="https://www.facebook.com/people/Brasserie-de-Paudex/61584189159056/" class="nav-social" aria-label="Facebook" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
           </a>
         </div>
@@ -155,21 +199,17 @@
     <section class="hero" id="accueil">
       <div class="hero-content">
         <!-- Logo Image -->
-        <img src="images/brasserie_paudex_rect.png" alt="Brasserie de Paudex" class="hero-logo">
+        <img src="images/brasserie_paudex_logo.svg" alt="Logo Brasserie de Paudex — restaurant à Paudex, Route du Lavaux" class="hero-logo">
 
-        <h1 class="hero-h1">Brasserie de Paudex – Restaurant au Bord du Lac Léman</h1>
+        <h1 class="hero-h1">Brasserie de Paudex - Restaurant 100% Fait Maison près de Lausanne</h1>
 
         <!-- Intro text in italic -->
         <p class="hero-intro">
-          La joyeuse brigade de la Brasserie de Paudex pose ses valises au bord du lac Léman,
-          à Paudex. C'est dans cette adresse emblématique que Fabrice Hochart, après 5 ans à
-          l'Auberge de l'Union à Palézieux, aiguise ses couteaux pour vous proposer une cuisine
-          de brasserie franche, généreuse et un peu canaille — pâté en croûte maison, filets
-          de perche du lac, viandes locales — le tout accompagné des meilleurs vins de Lavaux.
+          La Brasserie de Paudex, ce restaurant qui fait parler dans tout l'est lausannois — et pour cause ! À deux pas de Lausanne, sur la route du Lavaux, on y déguste des malakoffs si croustillants-coulants qu'ils créent une dépendance, un bœuf bourguignon du vendredi qui risque sérieusement de vous faire oublier tous vos problèmes de la semaine, et le burger maison élu (officieusement) meilleur du Vaud. Une <a href="#menus">cuisine 100% fait maison</a>, généreuse et réconfortante, avec des produits locaux et de saison. Bienvenue à table !
         </p>
 
         <!-- Hero Image -->
-        <img src="images/Brasserie-Des-Deux-Rives-hero.webp" alt="Plat signature de la Brasserie de Paudex" class="hero-image" loading="lazy">
+        <img src="images/Brasserie-Des-Deux-Rives-hero.webp" alt="Plat fait maison signature de la Brasserie de Paudex — cuisine de brasserie généreuse" class="hero-image" loading="lazy">
       </div>
     </section>
 
@@ -183,10 +223,13 @@
           <div class="horaires-card">
             <div class="horaires-card-line"></div>
             <div class="horaires-label">Nos Horaires</div>
-            <div class="horaires-day">Mardi - Samedi</div>
-            <p class="horaires-time">Déjeuner : 11h30 - 14h30</p>
-            <p class="horaires-time">Dîner : 18h00 - 22h30</p>
-            <p class="horaires-closed">Fermé le lundi</p>
+            <div class="horaires-day">Lundi, Mercredi - Vendredi</div>
+            <p class="horaires-time">10h00 - 14h30 / 17h00 - 22h30</p>
+            <div class="horaires-day">Mardi</div>
+            <p class="horaires-time">10h00 - 14h30 / 17h00 - 22h00</p>
+            <div class="horaires-day">Samedi</div>
+            <p class="horaires-time">17h00 - 22h30</p>
+            <p class="horaires-closed">Dimanche : Fermé</p>
           </div>
 
           <!-- Reservation Card -->
@@ -208,18 +251,18 @@
       <div class="container">
         <div class="intro-grid">
           <div class="intro-content">
-            <h2 class="section-title">De Palézieux à Paudex, une nouvelle histoire</h2>
+            <h2 class="section-title">Chef Fabrice Hochart - De Palézieux à Paudex</h2>
 
-            <p>Après 5 ans à faire vibrer l'Auberge de l'Union à Palézieux-Gare, nous avons eu le privilège de reprendre la Brasserie de Paudex, cette adresse emblématique du bord du lac Léman entre Lutry et Pully.</p>
+            <p class="intro-lead">Derrière chaque assiette de la Brasserie de Paudex, il y a un homme, une philosophie, et 20 ans de passion culinaire.</p>
 
-            <p>À seulement 10 minutes de Lausanne, notre nouvelle maison perpétue la même passion : une cuisine de brasserie franche, généreuse et un peu canaille, qui raconte l'histoire de notre terroir vaudois. Entre tradition suisse et créativité culinaire, nous transformons les meilleurs ingrédients de nos producteurs régionaux en moments de partage authentiques.</p>
+            <p>Quand Fabrice Hochart a quitté l'Auberge de l'Union après 5 ans de bons et loyaux services, une question revenait : <em>"Mais où va-t-il aiguiser ses couteaux maintenant ?"</em> La réponse ? À la Brasserie de Paudex, cette adresse emblématique nichée entre Lutry et Pully, sur la route du Lavaux.</p>
 
-            <p class="italic">Ici, pas de chichis. Du fait maison, des producteurs locaux qu'on connaît par leur prénom, et cette joie simple de bien manger ensemble — que vous soyez du coin ou de passage.</p>
+            <p>Ce libre-penseur culinaire cuisine comme il respire : selon ses goûts, ses envies, et cette philosophie bien à lui qui refuse les demi-mesures. <em>"Il n'y a pas de bas et de hauts morceaux : tout est bon quand c'est bien préparé !"</em> C'est son mantra. Et ça se vérifie dans chaque assiette qui sort de sa cuisine.</p>
 
-            <p class="intro-signature">— Fabrice Hochart, Chef</p>
+            <p>Passionné par les <a href="#producteurs">producteurs locaux</a> qu'il connaît par leur prénom — parce que chez Fabrice, on ne commande pas des ingrédients, on construit des relations — il transforme les meilleurs produits du terroir vaudois en moments de partage généreux. Entre tradition suisse et créativité culinaire, entre rigueur technique et convivialité débridée, c'est cette joie simple de bien manger ensemble qu'il apporte aujourd'hui à Paudex.</p>
           </div>
 
-          <img src="images/fabrice-portrait.jpeg" alt="Fabrice Hochart, Chef de la Brasserie de Paudex" class="intro-image" loading="lazy">
+          <img src="images/fabrice-portrait.jpeg" alt="Chef Fabrice Hochart — patron et cuisinier de la Brasserie de Paudex à Paudex" class="intro-image" loading="lazy">
         </div>
       </div>
     </section>
@@ -232,12 +275,13 @@
         <div class="menus-grid">
           <!-- Left: Menu Image -->
           <div class="menus-image-wrapper">
-            <img src="images/menu_img.png" alt="Nos cartes de la Brasserie de Paudex" class="menus-image" loading="lazy">
+            <img src="images/menu_img.png" alt="Carte et menus de la Brasserie de Paudex — cuisine fait maison, produits locaux" class="menus-image" loading="lazy">
           </div>
 
           <!-- Right: Menu List -->
           <div class="menus-content">
             <h2 class="section-title menus-title">Nos Menus</h2>
+            <p class="menus-intro">La cuisine se décline en deux cartes, renouvelées au fil des saisons et des inspirations.</p>
 
             <ul class="menus-list">
               <li class="menus-list-item">
@@ -246,8 +290,9 @@
               <li class="menus-list-item">
                 <a href="menus/proposition_de_la_semaine.pdf" class="menus-link" target="_blank" rel="noopener">CARTE DE LA SEMAINE</a>
               </li>
-              <li class="menus-list-item">
+             <li class="menus-list-item">
                 <a href="menus/vin.pdf" class="menus-link" target="_blank" rel="noopener">CARTE DES VINS</a>
+              </li>
               </li>
             </ul>
           </div>
@@ -261,15 +306,15 @@
     <section class="valeurs">
       <div class="valeurs-header">
         <h2 class="section-title valeurs-main-title">NOS VALEURS</h2>
-        <p class="valeurs-intro">Une cuisine de brasserie franche, généreuse et un peu canaille — c'est notre ADN. Ici, on croit à un modèle de restauration plus juste, plus humain, et plus durable. Ce n'est pas une fin en soi ni une médaille pour frimer, on le voit au contraire comme un point de départ, un engagement qu'on prend pour continuer jour après jour à s'améliorer.</p>
+        <p class="valeurs-intro">Une cuisine de brasserie franche, généreuse et un peu canaille, ancrée dans le terroir vaudois. Du fait maison, des produits locaux, et les vins du Lavaux — simple, direct, efficace.</p>
       </div>
 
       <div class="valeurs-grid">
         <!-- Left: Large vertical card -->
         <div class="valeur-card valeur-card--large" style="background-image: url('images/brasserie_blanc.webp');">
           <div class="valeur-card-overlay">
-            <h2 class="valeur-card-title">FAIT<br>MAISON</h2>
-            <p class="valeur-card-text">Nous portons fièrement le label « Fait Maison » de GastroSuisse. Tous nos plats sont entièrement préparés sur place, dans nos cuisines.</p>
+            <h3 class="valeur-card-title">FAIT <br>MAISON</h3>
+            <p class="valeur-card-text">Ici, tout est préparé sur place, à partir de produits bruts. Les sauces mijotent pendant des heures, les pâtisseries sortent du four chaque matin, et les malakoffs sont roulés à la main. Pas de sachets, pas de pré-préparé, pas de raccourcis — juste du temps, du savoir-faire, et cette fierté de servir une cuisine authentique. Notre Label Fait Maison officiel n'est pas un autocollant marketing : c'est notre engagement quotidien.</p>
           </div>
         </div>
 
@@ -278,14 +323,14 @@
           <div class="valeur-card valeur-card--small" style="background-image: url('images/brasserie_paudex_interieur2.jpeg');">
             <div class="valeur-card-overlay">
               <h3 class="valeur-card-title valeur-card-title--small">PRODUITS LOCAUX</h3>
-              <p class="valeur-card-text">Pommes de terre du Jorat, légumes de Palézieux, viandes vaudoises... Nous privilégions systématiquement les producteurs de notre région.</p>
+              <p class="valeur-card-text">Nos légumes viennent des maraîchers de la région, nos viandes sont suisses, et nos fromages portent l'AOP vaudoise. On connaît nos producteurs par leur prénom et on travaille au rythme des saisons. Résultat ? Des produits frais, tracés, et qui ont du goût.</p>
             </div>
           </div>
 
           <div class="valeur-card valeur-card--small" style="background-image: url('images/brasserie_blanc.webp');">
             <div class="valeur-card-overlay">
-              <h3 class="valeur-card-title valeur-card-title--small">VINS DE LAVAUX</h3>
-              <p class="valeur-card-text">Notre carte des vins fait la part belle aux vignerons de Lavaux — Grandvaux, Epesses, Lutry — ces terrasses classées au patrimoine mondial.</p>
+              <h3 class="valeur-card-title valeur-card-title--small">VINS DU LAVAUX</h3>
+              <p class="valeur-card-text">Avec les vignobles du Lavaux à quelques minutes, notre cave met à l'honneur les meilleurs crus de la région. Chasselas, gamay, pinot noir — des vins qui racontent notre terroir et qui s'accordent parfaitement avec notre cuisine de brasserie. Local, savoureux, et tellement logique.</p>
             </div>
           </div>
         </div>
@@ -298,7 +343,7 @@
     <section class="section lieu" id="lieu">
       <div class="lieu-header">
         <h2 class="section-title lieu-title">Notre Restaurant</h2>
-        <p class="lieu-intro">Nichée à Paudex, entre Lutry et Pully, la Brasserie de Paudex bénéficie d'un cadre exceptionnel au bord du lac Léman, à deux pas des vignobles en terrasse de Lavaux classés au patrimoine mondial de l'UNESCO. À seulement 10 minutes de Lausanne et 15 minutes de Vevey, notre maison mêle l'esprit des brasseries parisiennes — fresques murales dessinées à la main, chaises bistrot Thonet, banquettes de cuir — à la chaleur lémanique qui fait notre âme.</p>
+        <p class="lieu-intro">Ici, on est dans une brasserie comme on les aime : conviviale, décontractée, où tout le monde se sent chez soi. Familles, couples, bandes de potes — on accueille tout le monde avec le sourire. Aux beaux jours, la terrasse devient le quartier général pour déjeuner au soleil avec un verre bien frais. Et pour ceux qui aiment les ambiances un peu particulières, on a une cave souterraine aménagée en salle — atmosphère garantie ! Que vous soyez en haut avec vue sur les vignobles ou en bas dans notre cave, le programme reste le même : bien manger, bien boire, et <a href="#reservation">passer un bon moment</a>.</p>
       </div>
 
       <!-- Photo Gallery - Masonry Layout -->
@@ -311,10 +356,10 @@
             <img src="images/brasserie_paudex_interieur2.jpeg" alt="Décoration murale et ambiance bistrot à la Brasserie de Paudex" loading="lazy">
           </div>
           <div class="lieu-gallery-item">
-            <img src="images/brasserie_paudex_interieur3.jpeg" alt="Banquettes et tables de la Brasserie de Paudex, Rte du Simplon, Paudex" loading="lazy">
+            <img src="images/brasserie_paudex_interieur3.jpeg" alt="Banquettes et tables de la Brasserie de Paudex, Route du Simplon, Paudex" loading="lazy">
           </div>
           <div class="lieu-gallery-item">
-            <img src="images/brasserie_paudex_interieur4.jpeg" alt="Bar et comptoir de la Brasserie de Paudex au bord du lac Léman" loading="lazy">
+            <img src="images/brasserie_paudex_interieur4.jpeg" alt="Bar moderne — Brasserie de Paudex entre Lutry et Pully" loading="lazy">
           </div>
           <div class="lieu-gallery-item lieu-gallery-item--wide">
             <img src="images/brasserie_paudex_interieur5.jpeg" alt="Vue d'ensemble du restaurant Brasserie de Paudex à Lavaux" loading="lazy">
@@ -329,18 +374,18 @@
     <section class="section producteurs" id="producteurs">
       <div class="container">
         <h2 class="section-title text-center">Nos Vins & Producteurs de la Région</h2>
-        <p class="producteurs-intro">À la Brasserie de Paudex, nous travaillons en direct avec les vignerons et producteurs de la région. Transparence et qualité sont nos maîtres-mots.</p>
+        <p class="producteurs-intro">À la Brasserie de Paudex, on travaille en direct avec les vignerons et producteurs de la région. Des artisans passionnés qui partagent notre vision : du goût, de la qualité, et cette fierté de défendre ce qui se fait de mieux autour de nous. Des maraîchers aux éleveurs, en passant par les fromagers et les vignerons du Lavaux, chacun apporte son savoir-faire pour que vos assiettes racontent l'histoire du terroir vaudois. Transparence et qualité sont nos maîtres-mots.</p>
 
         <div class="producteurs-grid">
           <!-- Vignerons Column -->
           <div class="producteurs-column">
             <h3>Vignerons de Lavaux</h3>
             <ul class="producteurs-list">
-              <li>Domaine Croix Duplex — Epesses</li>
-              <li>Cave Luc Massy — Villette</li>
+              <li><a href="https://croix-duplex.ch" target="_blank" rel="noopener">Domaine Croix Duplex</a> — Epesses</li>
+              <li><a href="https://massy-vins.ch" target="_blank" rel="noopener">Cave Luc Massy</a> — Villette</li>
               <li>Domaine Antoine Bovard — Cully</li>
-              <li>Cave des Viticulteurs de Bonvillars — Bonvillars</li>
-              <li>Domaine Louis Bovard — Lutry</li>
+              <li><a href="https://cavedebonvillars.ch" target="_blank" rel="noopener">Cave des Viticulteurs de Bonvillars</a> — Bonvillars</li>
+              <li><a href="https://www.domainebovard.com" target="_blank" rel="noopener">Domaine Louis Bovard</a> — Lutry</li>
             </ul>
           </div>
 
@@ -367,7 +412,7 @@
 
             <p class="producteurs-category">Fromages</p>
             <ul class="producteurs-list">
-              <li>Fromagerie de Gruyères — Gruyères</li>
+              <li><a href="https://www.lamaisondugruyere.ch" target="_blank" rel="noopener">Fromagerie de Gruyères</a> — Gruyères</li>
               <li>Laiterie de Moudon — Moudon</li>
             </ul>
 
@@ -385,32 +430,29 @@
          ==================================================================== -->
     <section class="section avis" id="avis">
       <div class="container">
-        <h2 class="section-title text-center">Avis sur notre Restaurant</h2>
+        <h2 class="section-title text-center">Ce que nos clients disent</h2>
+        <p class="avis-intro">Parce que les meilleures recommandations viennent de ceux qui ont partagé nos tables.</p>
 
         <div class="grid-3">
           <!-- Testimonial 1 -->
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">"Comme d’habitude, sympa, agréable, gourmand, bref toujours un plaisir de venir y manger.
-Aujourd’hui nous avons mangé le bœuf bourguignon, un régal. Une explosion de saveur, tout les goûts s’harmonisent avec justesse.
-Le service était impeccable et efficace, quand au patron il est toujours fidèle à lui même, plein de bonne humeur et d’humour, sincèrement, si vous ne connaissez pas allez y."</p>
-            <p class="testimonial-author">— Yannick T. sur Google</p>
+            <p class="testimonial-quote">"Très bonne adresse ! J'ai pris un tartare en entrée, frais et bien assaisonné (enfin un tartare piquant !), puis une entrecôte tendre et parfaitement cuite. Les produits sont de qualité et ça se sent dans l'assiette. Déjà séduit par la cuisine du chef Hochart je suis heureux de le voir s'installer dans un cadre aussi agréable avec des serveurs très gentils tout au long du repas. Je recommande sans hésiter. À bientôt !"</p>
+            <p class="testimonial-author">— Sofiane sur Google</p>
           </div>
 
           <!-- Testimonial 2 -->
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">"Une serveuse accueillante souriante et à l'écoute des besoins (notamment pour un petit de 3 ans). Quant à la cuisine une belle surprise avec des produits frais, délicieusement apprêtés et une glace à la réglisse qui a couronné le tout :-) une jolie découverte, on retournera !!"</p>
-            <p class="testimonial-author">— Laurent D. sur Google</p>
+            <p class="testimonial-quote">"Réouverture de l'établissement. Très bonne cuisine, style brasserie. Une soupe à l'oignon à tomber qui rappelle une jeunesse. Très bonne ambiance conviviale et fine cuisine."</p>
+            <p class="testimonial-author">— Valerie sur Google</p>
           </div>
 
           <!-- Testimonial 3 -->
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">"Une adresse que l'on recommande, tant pour l'accueil que l'authenticité des plats proposés et cuisinés avec soin.
-Un patron haut en couleurs qui imprime une patte chaleureuse que l'équipe de service transmet sans chichis!
-Allez-y les yeux fermés si vous appréciez la bonne cuisine du terroir."</p>
-            <p class="testimonial-author">— Damien Ch. sur Google</p>
+            <p class="testimonial-quote">"Juste magnifique et le patron ! Une vraie pièce de théâtre à lui seul. Bravo on reviendra 🍻🌟🍻"</p>
+            <p class="testimonial-author">— Yan sur Google</p>
           </div>
         </div>
 <!--
@@ -432,18 +474,18 @@ Allez-y les yeux fermés si vous appréciez la bonne cuisine du terroir."</p>
           <!-- Left: All info -->
           <div class="trouver-info">
             <h2 class="section-title">Nous Trouver</h2>
-            <img src="images/Brasserie_de_Paudex_illustration.png" alt="Illustration Brasserie de Paudex" class="trouver-illustration">
+            <img src="images/Brasserie_de_Paudex_illustration.png" alt="Illustration de la façade de la Brasserie de Paudex, restaurant à Paudex près de Lausanne" class="trouver-illustration">
 
             <p><strong>Brasserie de Paudex</strong></p>
-            <p>Rte du Simplon 7, 1094 Paudex</p>
+            <p>Route du Simplon 7, 1094 Paudex</p>
             <p><a href="tel:+41219078150">+41 21 907 81 50</a></p>
             <p><a href="mailto:info@brasseriepaudex.ch">info@brasseriepaudex.ch</a></p>
 
             <div class="trouver-separator"></div>
 
-            <p><span class="trouver-label">En voiture</span> — Depuis Lausanne 10 min · Vevey 15 min · Parking disponible</p>
-            <p><span class="trouver-label">Transports publics</span> — Bus depuis Lausanne, arrêt à 2 min à pied</p>
-            <p><span class="trouver-label">À vélo</span> — Piste cyclable du lac · Parking vélos · PubliBike à proximité</p>
+            <p><span class="trouver-label">En voiture</span> — Depuis Lausanne 8 min · Vevey 15 min · Parking disponible</p>
+            <p><span class="trouver-label">Transports publics</span> — Bus ligne 9 depuis Lausanne, arrêt "Paudex" devant le restaurant</p>
+            <p><span class="trouver-label">À vélo</span> — Itinéraire vélo région lausannoise · Parking vélos disponible</p>
           </div>
 
           <!-- Right: Circular Google Map -->
@@ -460,7 +502,7 @@ Allez-y les yeux fermés si vous appréciez la bonne cuisine du terroir."</p>
                 title="Brasserie de Paudex sur Google Maps">
               </iframe>
             </div>
-            <a href="https://www.google.com/maps/dir//Rte+du+Simplon+7,+1094+Paudex,+Suisse" class="trouver-directions-btn" target="_blank" rel="noopener">Itinéraire →</a>
+            <a href="https://www.google.com/maps/dir//Route+du+Simplon+7,+1094+Paudex,+Suisse" class="trouver-directions-btn" target="_blank" rel="noopener">Itinéraire →</a>
           </div>
         </div>
       </div>
@@ -480,13 +522,13 @@ Allez-y les yeux fermés si vous appréciez la bonne cuisine du terroir."</p>
           <a href="mailto:info@brasseriepaudex.ch" class="footer-email">info@brasseriepaudex.ch</a>
 
           <div class="footer-social">
-            <a href="https://instagram.com/brasseriedepaudex" aria-label="Instagram" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/brasseriedepaudex/" aria-label="Instagram" target="_blank" rel="noopener">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-            <a href="https://tiktok.com/@brasseriedepaudex" aria-label="TikTok" target="_blank" rel="noopener">
+            <a href="https://www.tiktok.com/@brasseriedepaudex" aria-label="TikTok" target="_blank" rel="noopener">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
             </a>
-            <a href="https://facebook.com/brasseriedepaudex" aria-label="Facebook" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/people/Brasserie-de-Paudex/61584189159056/" aria-label="Facebook" target="_blank" rel="noopener">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
             </a>
           </div>
@@ -500,12 +542,13 @@ Allez-y les yeux fermés si vous appréciez la bonne cuisine du terroir."</p>
 
         <!-- Column 2: Logo + Info -->
         <div class="footer-column footer-column--center">
-          <img src="images/moustache.png" alt="Brasserie de Paudex" class="footer-logo">
+          <img src="images/moustache.png" alt="Moustache — emblème de la Brasserie de Paudex" class="footer-logo">
           <p>Brasserie de Paudex</p>
-          <p>Rte du Simplon 7</p>
+          <p>Route du Simplon 7</p>
           <p>1094 Paudex</p>
           <p class="footer-spacer"></p>
-          <p>Lun – Ven : 10h00–14h30 / 17h00–22h30</p>
+          <p>Lun, Mer–Ven : 10h00–14h30 / 17h00–22h30</p>
+          <p>Mardi : 10h00–14h30 / 17h00–22h00</p>
           <p>Samedi : 17h00–22h30</p>
           <p>Dimanche : Fermé</p>
         </div>
@@ -519,8 +562,8 @@ Allez-y les yeux fermés si vous appréciez la bonne cuisine du terroir."</p>
           <a href="mailto:info@brasseriepaudex.ch" class="footer-contact-link">info@brasseriepaudex.ch</a>
 
           <div class="footer-legal">
-            <a href="#">Mentions légales</a>
-            <a href="#">Politique de confidentialité</a>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
           </div>
         </div>
       </div>

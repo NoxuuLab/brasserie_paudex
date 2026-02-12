@@ -438,10 +438,10 @@ p:last-child {
 
 /* Hero Logo */
 .hero-logo {
-  max-width: 400px;
+  max-width: 280px;
   width: 100%;
   height: auto;
-  margin: 0 auto var(--space-10);
+  margin: 0 auto 60px;
 }
 
 /* Hero H1 - SEO heading, visually subtle */
@@ -452,7 +452,7 @@ p:last-child {
   color: var(--color-primary);
   letter-spacing: var(--letter-spacing-wide);
   text-align: center;
-  margin-bottom: var(--space-6);
+  margin-bottom: 60px;
 }
 
 /* Address with decorative lines */
@@ -507,8 +507,8 @@ p:last-child {
   }
 
   .hero-logo {
-    max-width: 450px;
-    margin-bottom: var(--space-12);
+    max-width: 320px;
+    margin-bottom: 60px;
   }
 
   .hero-address-line {
@@ -534,7 +534,7 @@ p:last-child {
   }
 
   .hero-logo {
-    max-width: 500px;
+    max-width: 360px;
   }
 
   .hero-intro {
@@ -1061,6 +1061,23 @@ p:last-child {
   color: var(--color-black-light);
 }
 
+.producteurs-list li a {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.producteurs-list li a:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+.producteurs-list li a::after {
+  content: " ↗";
+  font-size: 0.75em;
+  opacity: 0.6;
+}
+
 .producteurs-category {
   font-weight: 600;
   color: var(--color-black);
@@ -1080,6 +1097,14 @@ p:last-child {
 
 .avis {
   background-color: var(--color-cream);
+}
+
+.avis-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-8);
+  color: var(--color-text-light);
+  font-style: italic;
 }
 
 .testimonial-card {
