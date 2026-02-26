@@ -1,0 +1,9 @@
+.git
+.github
+.gitignore
+.ftpignore
+node_modules
+README.md
+.htaccess
+.user.ini
+.infomaniak-maintenance.html
