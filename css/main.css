@@ -638,10 +638,16 @@ p:last-child {
   font-size: var(--text-h4);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-wider);
+  letter-spacing: 0.04em;
   color: var(--color-black);
   margin-top: var(--space-3);
   margin-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .horaires-label {
+    letter-spacing: var(--letter-spacing-wider);
+  }
 }
 
 .horaires-note {
@@ -654,7 +660,7 @@ p:last-child {
 
 .horaires-day {
   font-family: var(--font-heading);
-  font-size: var(--text-h3);
+  font-size: var(--text-small);
   font-weight: 700;
   margin-bottom: var(--space-2);
 }
@@ -665,11 +671,10 @@ p:last-child {
   margin-bottom: var(--space-1);
 }
 
-.horaires-closed {
-  font-size: var(--text-small);
-  color: var(--color-gray);
-  margin-top: var(--space-2);
+.horaires-time + .horaires-day {
+  margin-top: var(--space-4);
 }
+
 
 .reservation-phone {
   display: block;
@@ -835,6 +840,13 @@ p:last-child {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+}
+
+.valeurs-label-img {
+  width: 260px;
+  height: auto;
+  display: block;
+  margin: auto;
 }
 
 .valeur-card {
