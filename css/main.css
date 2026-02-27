@@ -676,6 +676,130 @@ p:last-child {
 }
 
 
+/* ============================================================
+   RESERVATION PAGE
+   ============================================================ */
+
+.reservation-back-link {
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.reservation-back-link:hover {
+  text-decoration: underline;
+}
+
+.reservation-page-footer {
+  background-color: var(--color-black);
+  color: var(--color-cream);
+  text-align: center;
+  padding: var(--space-4);
+  font-size: var(--text-small);
+}
+
+.reservation-page-footer a {
+  color: var(--color-cream);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   RESERVATION FORM
+   ============================================================ */
+
+.reservation-form-section {
+  background-color: var(--color-cream);
+}
+
+.reservation-form-intro {
+  text-align: center;
+  color: var(--color-black-light);
+  margin-bottom: var(--space-6);
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reservation-form {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.reservation-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 600px) {
+  .reservation-form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.reservation-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.reservation-form-group--full {
+  grid-column: 1 / -1;
+}
+
+.reservation-form-group label {
+  font-size: var(--text-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-black);
+}
+
+.reservation-form-group input,
+.reservation-form-group select,
+.reservation-form-group textarea {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid #d0c8bc;
+  background-color: #fff;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-black);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--transition-normal);
+}
+
+.reservation-form-group input:focus,
+.reservation-form-group select:focus,
+.reservation-form-group textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.reservation-form-group textarea {
+  resize: vertical;
+}
+
+.reservation-form-submit {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.reservation-form-note {
+  font-size: var(--text-small);
+  color: var(--color-gray);
+  font-style: italic;
+}
+
+/* ============================================================ */
+
 .reservation-phone {
   display: block;
   font-size: var(--text-body-large);
@@ -839,7 +963,15 @@ p:last-child {
 .valeurs-right {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: var(--space-4);
+}
+
+.valeurs-label-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .valeurs-label-img {
@@ -847,6 +979,27 @@ p:last-child {
   height: auto;
   display: block;
   margin: auto;
+  transition: opacity 0.2s ease;
+}
+
+.valeurs-label-link:hover .valeurs-label-img {
+  opacity: 0.85;
+}
+
+.valeurs-label-caption {
+  text-align: center;
+  font-size: var(--text-small);
+  color: var(--color-white);
+  margin-top: var(--space-1);
+}
+
+.valeurs-label-caption a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.valeurs-label-caption a:hover {
+  text-decoration: underline;
 }
 
 .valeur-card {
@@ -901,6 +1054,16 @@ p:last-child {
   font-size: var(--text-small);
   line-height: var(--line-height-relaxed);
   max-width: 400px;
+}
+
+.valeur-card-text a {
+  color: var(--color-cream);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.valeur-card-text a:hover {
+  opacity: 0.8;
 }
 
 @media (min-width: 768px) {
@@ -977,6 +1140,16 @@ p:last-child {
   color: var(--color-primary);
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.lieu-cta {
+  text-align: center;
+  margin-top: var(--space-5);
+}
+
+.trouver-cta {
+  display: inline-block;
+  margin-top: var(--space-5);
 }
 
 /* Gallery Layout */
@@ -1204,6 +1377,14 @@ p:last-child {
 
 .trouver-info a:hover {
   color: var(--color-primary-dark);
+}
+
+.trouver-info a.btn-primary {
+  color: var(--color-white);
+}
+
+.trouver-info a.btn-primary:hover {
+  color: var(--color-white);
 }
 
 .trouver-label {

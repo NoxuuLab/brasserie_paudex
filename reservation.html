@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Réserver une table | Brasserie de Paudex</title>
+  <meta name="description" content="Réservez votre table à la Brasserie de Paudex. Restaurant fait maison à Paudex, près de Lausanne. Réservation en ligne ou par téléphone au +41 21 907 81 50.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav" aria-label="Navigation principale">
+        <div class="nav-left">
+          <a href="index.html" class="reservation-back-link">← Retour</a>
+        </div>
+        <a href="index.html" class="nav-logo">
+          <img src="images/brasserie_paudex_rect.webp" alt="Logo Brasserie de Paudex" class="nav-logo-img">
+        </a>
+        <div class="nav-right">
+          <a href="tel:+41219078150" class="nav-phone">+41 21 907 81 50</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reservation-form-section">
+      <div class="container">
+        <h1 class="section-title text-center">Réserver une table</h1>
+        <p class="reservation-form-intro">Remplissez le formulaire ci-dessous et nous vous confirmons votre réservation dans les plus brefs délais. Vous pouvez aussi nous appeler directement au <a href="tel:+41219078150">+41 21 907 81 50</a>.</p>
+
+        <!-- Message de confirmation -->
+        <div id="form-confirmation" style="display:none; background:#e8f5e9; border:1px solid #a5d6a7; border-radius:8px; padding:20px; margin-bottom:24px; text-align:center;">
+          <p style="color:#2e7d32; font-size:1.1rem; font-weight:600;">✓ Votre demande a bien été envoyée !</p>
+          <p style="color:#388e3c; margin-top:8px;">Nous vous confirmons votre réservation par email ou téléphone sous 24h. Un email de confirmation vous a été envoyé.</p>
+        </div>
+
+        <!-- Message d'erreur -->
+        <div id="form-erreur" style="display:none; background:#ffebee; border:1px solid #ef9a9a; border-radius:8px; padding:20px; margin-bottom:24px; text-align:center;">
+          <p style="color:#c62828; font-size:1.1rem; font-weight:600;">Une erreur s'est produite.</p>
+          <p style="color:#d32f2f; margin-top:8px;">Veuillez réessayer ou nous appeler directement au <a href="tel:+41219078150" style="color:#d32f2f;">+41 21 907 81 50</a>.</p>
+        </div>
+
+        <form class="reservation-form" action="contact.php" method="post" id="reservation-form">
+
+          <div class="reservation-form-row">
+            <div class="reservation-form-group">
+              <label for="res-prenom">Prénom *</label>
+              <input type="text" id="res-prenom" name="prenom" placeholder="Votre prénom" required>
+            </div>
+            <div class="reservation-form-group">
+              <label for="res-nom">Nom *</label>
+              <input type="text" id="res-nom" name="nom" placeholder="Votre nom" required>
+            </div>
+          </div>
+
+          <div class="reservation-form-row">
+            <div class="reservation-form-group">
+              <label for="res-email">Email *</label>
+              <input type="email" id="res-email" name="email" placeholder="votre@email.ch" required>
+            </div>
+            <div class="reservation-form-group">
+              <label for="res-tel">Téléphone *</label>
+              <input type="tel" id="res-tel" name="telephone" placeholder="+41 xx xxx xx xx" required>
+            </div>
+          </div>
+
+          <div class="reservation-form-row">
+            <div class="reservation-form-group">
+              <label for="res-date">Date souhaitée *</label>
+              <input type="date" id="res-date" name="date" required>
+            </div>
+            <div class="reservation-form-group">
+              <label for="res-heure">Heure souhaitée *</label>
+              <select id="res-heure" name="heure" required>
+                <option value="" disabled selected>Choisir une heure</option>
+                <optgroup label="Midi">
+                  <option value="11:00">11h00</option>
+                  <option value="11:30">11h30</option>
+                  <option value="12:00">12h00</option>
+                  <option value="12:30">12h30</option>
+                  <option value="13:00">13h00</option>
+                  <option value="13:30">13h30</option>
+                </optgroup>
+                <optgroup label="Soir">
+                  <option value="17:30">17h30</option>
+                  <option value="18:00">18h00</option>
+                  <option value="18:30">18h30</option>
+                  <option value="19:00">19h00</option>
+                  <option value="19:30">19h30</option>
+                  <option value="20:00">20h00</option>
+                  <option value="20:30">20h30</option>
+                  <option value="21:00">21h00</option>
+                  <option value="21:30">21h30</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="reservation-form-row">
+            <div class="reservation-form-group">
+              <label for="res-personnes">Nombre de personnes *</label>
+              <select id="res-personnes" name="personnes" required>
+                <option value="" disabled selected>Choisir</option>
+                <option value="1">1 personne</option>
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+                <option value="7+">7 personnes et plus</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="reservation-form-group reservation-form-group--full">
+            <label for="res-message">Demandes spéciales</label>
+            <textarea id="res-message" name="message" rows="4" placeholder="Allergies, anniversaire, chaise haute, événement particulier…"></textarea>
+          </div>
+
+          <div class="reservation-form-submit">
+            <button type="submit" class="btn btn-primary btn-lg">Envoyer ma réservation</button>
+            <p class="reservation-form-note">* Champs obligatoires. Nous vous confirmons par email ou téléphone sous 24h.</p>
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <p class="footer-tagline">Envie de bien manger ?</p>
+          <a href="mailto:info@brasseriepaudex.ch" class="footer-email">info@brasseriepaudex.ch</a>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/brasseriedepaudex/" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.tiktok.com/@brasseriedepaudex" aria-label="TikTok" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/people/Brasserie-de-Paudex/61584189159056/" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/fabrice-hochart/" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+          <p class="footer-newsletter-label">Recevoir nos actualités par mail :</p>
+          <form class="footer-newsletter inf-form" method="post" action="https://newsletter.infomaniak.com/v3/api/1/newsletters/webforms/23312/submit">
+            <input type="email" name="email" style="display:none" />
+            <input type="hidden" name="key" value="eyJpdiI6IjlNVHVKbkRFRG9LNWExOGJhaVwvZWRMNUZ1TG5vellzVG1XakNoN3J1TURVPSIsIm1hYyI6IjU5NTAwYTY2ZjEwMjM0YzE2YmZiOTY2NTk2ZWViN2QzZTI3NTY3MTViODJhN2IyYWVmZWQyZmM5NmU1YmJjMDAiLCJ2YWx1ZSI6IkpIcHRyRHJKMGlNRnVtaWd4ajY4Z2kyM3BVMnAxTk9MUnU1QW9ZMFpzekU9In0=">
+            <input type="hidden" name="webform_id" value="23312">
+            <input type="email" name="inf[1]" data-inf-meta="1" class="footer-newsletter-input" placeholder="Votre email" required aria-label="Adresse email pour newsletter">
+            <altcha-widget hidelogo hidefooter floating challengeurl="https://newsletter.infomaniak.com/v3/altcha-challenge"></altcha-widget>
+            <button type="submit" class="footer-newsletter-btn">S'abonner</button>
+          </form>
+        </div>
+
+        <div class="footer-column footer-column--center">
+          <img src="images/logo-brasseriepaudex-brown.svg" alt="Logo Brasserie de Paudex" class="footer-logo">
+          <p>Brasserie de Paudex</p>
+          <p>Route du Simplon 7</p>
+          <p>1094 Paudex</p>
+          <p class="footer-spacer"></p>
+          <p>Lun–Ven : 10h00–14h30 / 17h30–22h30</p>
+          <p>Samedi : 17h00–22h30</p>
+          <p>Dimanche : Fermé</p>
+        </div>
+
+        <div class="footer-column">
+          <p class="footer-label">Réservations :</p>
+          <a href="tel:+41219078150" class="footer-contact-link">+41 21 907 81 50</a>
+          <p class="footer-label">Contact :</p>
+          <a href="mailto:info@brasseriepaudex.ch" class="footer-contact-link">info@brasseriepaudex.ch</a>
+          <div class="footer-legal">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Brasserie de Paudex — Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="https://eu.altcha.org/js/latest/altcha.min.js" type="module" defer></script>
+  <script src="https://newsletter.storage5.infomaniak.com/mcaptcha/altcha.js" defer></script>
+  <script src="https://newsletter.infomaniak.com/v3/static/webform_index.js?v=1772209638"></script>
+
+  <!-- Affichage des messages confirmation/erreur selon paramètre URL -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('confirmation') === 'ok') {
+      document.getElementById('form-confirmation').style.display = 'block';
+      document.getElementById('reservation-form').style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    if (params.get('erreur')) {
+      document.getElementById('form-erreur').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
