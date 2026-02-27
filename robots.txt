@@ -1,6 +1,3 @@
 User-agent: *
-Disallow: /
-
-# Production: uncomment lines below and remove Disallow above
-# Allow: /
-# Sitemap: https://brasseriepaudex.ch/sitemap.xml
+Allow: /
+Sitemap: https://brasseriepaudex.ch/sitemap.xml
