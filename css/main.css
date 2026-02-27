@@ -1379,12 +1379,14 @@ p:last-child {
   color: var(--color-primary-dark);
 }
 
-.trouver-info a.btn-primary {
-  color: var(--color-white);
+.trouver-info a.btn-primary,
+a.btn-primary.trouver-cta {
+  color: var(--color-white) !important;
 }
 
-.trouver-info a.btn-primary:hover {
-  color: var(--color-white);
+.trouver-info a.btn-primary:hover,
+a.btn-primary.trouver-cta:hover {
+  color: var(--color-white) !important;
 }
 
 .trouver-label {
