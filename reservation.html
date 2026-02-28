@@ -55,6 +55,16 @@
         <h1 class="section-title text-center">Réserver une table</h1>
         <p class="reservation-form-intro">Remplissez le formulaire ci-dessous et nous vous confirmons votre réservation dans les plus brefs délais. Vous pouvez aussi nous appeler directement au <a href="tel:+41219078150">+41 21 907 81 50</a>.</p>
 
+        <!-- Bandeau réservation jour même -->
+        <div class="reservation-same-day-banner">
+          📞 Pour une réservation <strong>le jour même</strong>, appelez-nous directement au <a href="tel:+41219078150">+41 21 907 81 50</a>
+        </div>
+
+        <!-- Alerte dynamique si date = aujourd'hui -->
+        <div id="same-day-alert" style="display:none;" class="reservation-same-day-alert">
+          ⚠️ Vous avez sélectionné <strong>aujourd'hui</strong> — pour réserver le jour même, merci de nous appeler directement au <a href="tel:+41219078150">+41 21 907 81 50</a>.
+        </div>
+
         <!-- Message de confirmation -->
         <div id="form-confirmation" style="display:none; background:#e8f5e9; border:1px solid #a5d6a7; border-radius:8px; padding:20px; margin-bottom:24px; text-align:center;">
           <p style="color:#2e7d32; font-size:1.1rem; font-weight:600;">✓ Votre demande a bien été envoyée !</p>
@@ -218,6 +228,15 @@
   <script src="https://eu.altcha.org/js/latest/altcha.min.js" type="module" defer></script>
   <script src="https://newsletter.storage5.infomaniak.com/mcaptcha/altcha.js" defer></script>
   <script src="https://newsletter.infomaniak.com/v3/static/webform_index.js?v=1772209638"></script>
+
+  <!-- Alerte réservation jour même -->
+  <script>
+    document.getElementById('res-date').addEventListener('change', function() {
+      var today = new Date().toISOString().split('T')[0];
+      var alert = document.getElementById('same-day-alert');
+      alert.style.display = this.value === today ? 'block' : 'none';
+    });
+  </script>
 
   <!-- Affichage des messages confirmation/erreur selon paramètre URL -->
   <script>

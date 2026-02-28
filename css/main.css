@@ -713,6 +713,40 @@ p:last-child {
   background-color: var(--color-cream);
 }
 
+.reservation-same-day-banner {
+  background-color: #f0e8d5;
+  border: 2px solid var(--color-primary);
+  color: var(--color-black);
+  text-align: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-5);
+  font-size: var(--text-body);
+}
+
+.reservation-same-day-banner a {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.reservation-same-day-alert {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  color: #7d5a00;
+  text-align: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-5);
+  font-size: var(--text-body);
+}
+
+.reservation-same-day-alert a {
+  color: #7d5a00;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .reservation-form-intro {
   text-align: center;
   color: var(--color-black-light);
