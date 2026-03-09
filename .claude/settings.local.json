@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where cwebp)",
+      "Bash(where magick)",
+      "Bash(where ffmpeg)",
+      "Bash(node -e \"require\\(''sharp''\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\(''pillow available''\\)\")",
+      "Bash(git commit:*)",
+      "Bash(git push)"
+    ]
+  }
+}
