@@ -1,0 +1,26 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Remove double slashes
+  RewriteCond %{THE_REQUEST} \s//
+  RewriteRule ^(.*)$ /$1 [R=301,L]
+
+  # Redirect www → non-www
+  RewriteCond %{HTTP_HOST} ^www\.brasseriepaudex\.ch [NC]
+  RewriteRule ^(.*)$ https://brasseriepaudex.ch/$1 [R=301,L]
+</IfModule>
+
+# Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
