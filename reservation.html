@@ -155,6 +155,14 @@
             <textarea id="res-message" name="message" rows="4" placeholder="Allergies, anniversaire, chaise haute, événement particulier…"></textarea>
           </div>
 
+          <div class="reservation-form-group reservation-form-group--full reservation-newsletter-opt">
+            <label class="reservation-newsletter-label">
+              <input type="checkbox" id="res-newsletter" name="newsletter" value="1">
+              <span>Je souhaite recevoir la newsletter de la Brasserie de Paudex (menu de la semaine, événements...)</span>
+            </label>
+            <p class="reservation-newsletter-legal">En cochant cette case, vous acceptez de recevoir nos actualités par email. Désinscription possible à tout moment. <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
+          </div>
+
           <div class="reservation-form-submit">
             <button type="submit" class="btn btn-primary btn-lg">Envoyer ma réservation</button>
             <p class="reservation-form-note">* Champs obligatoires. Nous vous confirmons par email ou téléphone sous 24h.</p>
@@ -252,6 +260,25 @@
         document.getElementById('same-day-alert').style.display = 'block';
         document.getElementById('same-day-alert').scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
+    });
+  </script>
+
+  <!-- Inscription newsletter depuis formulaire de réservation -->
+  <script>
+    document.getElementById('reservation-form').addEventListener('submit', function() {
+      var checkbox = document.getElementById('res-newsletter');
+      if (!checkbox.checked) return;
+      var email = document.getElementById('res-email').value;
+      if (!email) return;
+      var data = new FormData();
+      data.append('email', email);
+      data.append('inf[1]', email);
+      data.append('webform_id', '23312');
+      data.append('key', 'eyJpdiI6IjlNVHVKbkRFRG9LNWExOGJhaVwvZWRMNUZ1TG5vellzVG1XakNoN3J1TURVPSIsIm1hYyI6IjU5NTAwYTY2ZjEwMjM0YzE2YmZiOTY2NTk2ZWViN2QzZTI3NTY3MTViODJhN2IyYWVmZWQyZmM5NmU1YmJjMDAiLCJ2YWx1ZSI6IkpIcHRyRHJKMGlNRnVtaWd4ajY4Z2kyM3BVMnAxTk9MUnU1QW9ZMFpzekU9In0=');
+      fetch('https://newsletter.infomaniak.com/v3/api/1/newsletters/webforms/23312/submit', {
+        method: 'POST',
+        body: data
+      });
     });
   </script>
 
