@@ -46,7 +46,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css?v=2">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -656,19 +656,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Offset header below announcement banner -->
-  <script>
-    (function() {
-      var banner = document.querySelector('.announcement-banner');
-      var header = document.getElementById('header');
-      if (banner && header) {
-        var h = banner.offsetHeight;
-        header.style.top = h + 'px';
-        document.body.style.paddingTop = (h + header.offsetHeight) + 'px';
-      }
-    })();
-  </script>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
