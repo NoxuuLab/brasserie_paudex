@@ -183,6 +183,11 @@
   </script>
 </head>
 <body>
+  <!-- Bandeau annonce temporaire -->
+  <div class="announcement-banner">
+    🐣 Le restaurant sera <strong>fermé du 3 au 6 avril</strong> pour le week-end de Pâques. Bonnes fêtes à tous !
+  </div>
+
   <!-- ====================================================================
        HEADER / NAVIGATION
        ==================================================================== -->
@@ -232,7 +237,7 @@
     <a href="#accueil" class="mobile-nav-link">Accueil</a>
     <a href="#brasserie" class="mobile-nav-link">La Brasserie</a>
     <a href="#menus" class="mobile-nav-link">Nos Menus</a>
-    <a href="#reservation" class="mobile-nav-link">Réservation</a>
+    <a href="reservation.html" class="mobile-nav-link">Réservation</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
 
     <a href="tel:+41219078150" class="mobile-nav-phone">☎ +41 21 907 81 50</a>
@@ -651,6 +656,19 @@
       </div>
     </div>
   </footer>
+
+  <!-- Offset header below announcement banner -->
+  <script>
+    (function() {
+      var banner = document.querySelector('.announcement-banner');
+      var header = document.getElementById('header');
+      if (banner && header) {
+        var h = banner.offsetHeight;
+        header.style.top = h + 'px';
+        document.body.style.paddingTop = (h + header.offsetHeight) + 'px';
+      }
+    })();
+  </script>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>

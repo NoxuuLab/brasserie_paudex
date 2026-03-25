@@ -32,6 +32,11 @@
 </head>
 <body>
 
+  <!-- Bandeau annonce temporaire -->
+  <div class="announcement-banner">
+    🐣 Le restaurant sera <strong>fermé du 3 au 6 avril</strong> pour le week-end de Pâques. Bonnes fêtes à tous !
+  </div>
+
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="container">
@@ -237,6 +242,19 @@
   <script src="https://eu.altcha.org/js/latest/altcha.min.js" type="module" defer></script>
   <script src="https://newsletter.storage5.infomaniak.com/mcaptcha/altcha.js" defer></script>
   <script src="https://newsletter.infomaniak.com/v3/static/webform_index.js?v=1772209638"></script>
+
+  <!-- Offset header below announcement banner -->
+  <script>
+    (function() {
+      var banner = document.querySelector('.announcement-banner');
+      var header = document.getElementById('header');
+      if (banner && header) {
+        var h = banner.offsetHeight;
+        header.style.top = h + 'px';
+        document.body.style.paddingTop = (h + header.offsetHeight) + 'px';
+      }
+    })();
+  </script>
 
   <!-- Blocage réservation jour même -->
   <script>
