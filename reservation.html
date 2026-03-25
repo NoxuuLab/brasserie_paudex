@@ -62,7 +62,7 @@
 
         <!-- Alerte dynamique si date = aujourd'hui -->
         <div id="same-day-alert" style="display:none;" class="reservation-same-day-alert">
-          ⚠️ Vous avez sélectionné <strong>aujourd'hui</strong> — pour réserver le jour même, merci de nous appeler directement au <a href="tel:+41219078150">+41 21 907 81 50</a>.
+          ⚠️ <strong>Les réservations en ligne ne sont pas disponibles pour le jour même.</strong><br>Pour réserver aujourd'hui, appelez-nous directement au <a href="tel:+41219078150">+41 21 907 81 50</a>.
         </div>
 
         <!-- Message de confirmation -->
@@ -229,12 +229,28 @@
   <script src="https://newsletter.storage5.infomaniak.com/mcaptcha/altcha.js" defer></script>
   <script src="https://newsletter.infomaniak.com/v3/static/webform_index.js?v=1772209638"></script>
 
-  <!-- Alerte réservation jour même -->
+  <!-- Blocage réservation jour même -->
   <script>
+    // Set min date to tomorrow
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    document.getElementById('res-date').min = tomorrow.toISOString().split('T')[0];
+
+    // Show alert if user somehow selects today, and block form submission
     document.getElementById('res-date').addEventListener('change', function() {
       var today = new Date().toISOString().split('T')[0];
-      var alert = document.getElementById('same-day-alert');
-      alert.style.display = this.value === today ? 'block' : 'none';
+      var alertBox = document.getElementById('same-day-alert');
+      alertBox.style.display = this.value <= today ? 'block' : 'none';
+    });
+
+    document.getElementById('reservation-form').addEventListener('submit', function(e) {
+      var today = new Date().toISOString().split('T')[0];
+      var date = document.getElementById('res-date').value;
+      if (date <= today) {
+        e.preventDefault();
+        document.getElementById('same-day-alert').style.display = 'block';
+        document.getElementById('same-day-alert').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     });
   </script>
 
