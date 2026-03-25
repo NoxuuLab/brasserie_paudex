@@ -449,7 +449,7 @@ p:last-child {
   text-align: center;
   background-color: var(--color-white);
   color: var(--color-black);
-  padding-top: 120px; /* Account for fixed header + extra space */
+  padding-top: 162px; /* Account for fixed header (80px) + announcement banner (42px) + extra space */
   padding-bottom: 0;
 }
 
@@ -734,6 +734,7 @@ p:last-child {
 
 .reservation-form-section {
   background-color: var(--color-cream);
+  padding-top: calc(var(--section-padding-y) + 42px); /* extra offset for announcement banner */
 }
 
 .reservation-same-day-banner {
