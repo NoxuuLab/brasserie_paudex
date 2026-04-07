@@ -230,7 +230,7 @@ p:last-child {
 
 .header {
   position: fixed;
-  top: 42px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: var(--z-fixed);
@@ -449,7 +449,7 @@ p:last-child {
   text-align: center;
   background-color: var(--color-white);
   color: var(--color-black);
-  padding-top: 162px; /* Account for fixed header (80px) + announcement banner (42px) + extra space */
+  padding-top: 120px; /* Account for fixed header height */
   padding-bottom: 0;
 }
 
@@ -526,7 +526,7 @@ p:last-child {
 
 @media (min-width: 768px) {
   .hero {
-    padding-top: 140px;
+    padding-top: 98px;
   }
 
   .hero-logo {
@@ -553,7 +553,7 @@ p:last-child {
 
 @media (min-width: 992px) {
   .hero {
-    padding-top: 160px;
+    padding-top: 118px;
   }
 
   .hero-logo {
@@ -734,7 +734,7 @@ p:last-child {
 
 .reservation-form-section {
   background-color: var(--color-cream);
-  padding-top: calc(var(--section-padding-y) + 42px); /* extra offset for announcement banner */
+  padding-top: var(--section-padding-y);
 }
 
 .reservation-same-day-banner {
