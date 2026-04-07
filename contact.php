@@ -68,34 +68,7 @@ if ($sent) {
     // Email de confirmation au client
     $subject_client = "Votre demande de réservation — Brasserie de Paudex";
 
-    // Fermeture de Pâques du 3 au 6 avril 2026
-    $today        = new DateTime('now', new DateTimeZone('Europe/Zurich'));
-    $closureStart = new DateTime('2026-04-03', new DateTimeZone('Europe/Zurich'));
-    $closureEnd   = new DateTime('2026-04-06 23:59:59', new DateTimeZone('Europe/Zurich'));
-    $isClosure    = ($today >= $closureStart && $today <= $closureEnd);
-
-    if ($isClosure) {
-        $body_client = "
-Bonjour,
-
-Merci pour votre message !
-
-On a décidé de laisser refroidir les pianos et de ranger les tabliers pour quelques jours. Le restaurant sera fermé du 3 au 6 avril inclus.
-
-L'équipe est partie chercher l'inspiration (et un peu de repos) loin des casseroles. On sera de retour, frais et dispos, le mardi 7 avril.
-
-On revient le 7 avril avec le sourire et une carte prête à être dégustée. Si vous écrivez pour une réservation, on traitera votre demande par ordre d'arrivée dès notre retour.
-
-Merci de votre patience et à mardi !
-
----
-Brasserie de Paudex
-Route du Simplon 7, 1094 Paudex
-+41 21 907 81 50
-info@brasseriepaudex.ch
-";
-    } else {
-        $body_client = "
+    $body_client = "
 Bonjour {$prenom},
 
 Nous avons bien reçu votre demande de réservation pour le {$date} à {$heure} ({$personnes} personne(s)).
@@ -112,7 +85,6 @@ Route du Simplon 7, 1094 Paudex
 +41 21 907 81 50
 info@brasseriepaudex.ch
 ";
-    }
     $headers_client  = "From: info@brasseriepaudex.ch\r\n";
     $headers_client .= "Content-Type: text/plain; charset=UTF-8\r\n";
     mail($email, $subject_client, $body_client, $headers_client);
