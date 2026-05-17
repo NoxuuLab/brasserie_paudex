@@ -230,7 +230,7 @@ p:last-child {
 
 .header {
   position: fixed;
-  top: 42px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: var(--z-fixed);
