@@ -68,34 +68,7 @@ if ($sent) {
     // Email de confirmation au client
     $subject_client = "Votre demande de réservation — Brasserie de Paudex";
 
-    // Fermeture du 14 au 17 mai 2026
-    $today        = new DateTime('now', new DateTimeZone('Europe/Zurich'));
-    $closureStart = new DateTime('2026-05-14', new DateTimeZone('Europe/Zurich'));
-    $closureEnd   = new DateTime('2026-05-17 23:59:59', new DateTimeZone('Europe/Zurich'));
-    $isClosure    = ($today >= $closureStart && $today <= $closureEnd);
-
-    if ($isClosure) {
-        $body_client = "
-Bonjour,
-
-Merci pour votre message !
-
-Les pianos sont au repos et les tabliers accrochés — le restaurant est fermé du 14 au 17 mai inclus.
-
-On profite de ces quelques jours pour souffler et revenir avec l'envie de vous régaler. On sera de retour le lundi 18 mai, frais et dispos.
-
-Si vous écrivez pour une réservation, on traitera votre demande par ordre d'arrivée dès notre retour.
-
-Merci de votre patience et à lundi !
-
----
-Brasserie de Paudex
-Route du Simplon 7, 1094 Paudex
-+41 21 907 81 50
-info@brasseriepaudex.ch
-";
-    } else {
-        $body_client = "
+    $body_client = "
 Bonjour {$prenom},
 
 Nous avons bien reçu votre demande de réservation pour le {$date} à {$heure} ({$personnes} personne(s)).
@@ -112,7 +85,6 @@ Route du Simplon 7, 1094 Paudex
 +41 21 907 81 50
 info@brasseriepaudex.ch
 ";
-    }
     $headers_client  = "From: info@brasseriepaudex.ch\r\n";
     $headers_client .= "Content-Type: text/plain; charset=UTF-8\r\n";
     mail($email, $subject_client, $body_client, $headers_client);
